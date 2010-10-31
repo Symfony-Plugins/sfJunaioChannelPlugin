@@ -1,28 +1,42 @@
-<?xml version="1.0" encoding="##ENCODING##"?>
+<?xml version="1.0" encoding="utf8"?>
 <package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.4.1" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
   <name>sfJunaioChannelPlugin</name>
   <channel>plugins.symfony-project.org</channel>
-  <summary>##SUMMARY##</summary>
-  <description>##SUMMARY##</description>
+  <summary>The sfJunaioChannelPlugin serves as Junaio Channel and provides POI data, which is managed with the sfJunaioBackendPlugin.</summary>
+  <description>The sfJunaioChannelPlugin serves as Junaio Channel and provides
+POI data, which is managed with the sfJunaioBackendPlugin.
+
+You need a Junaio Developer Account, which can created here:
+
+http://www.junaio.com/publisher</description>
   <lead>
-    <name>##LEAD_NAME##</name>
-    <user>##LEAD_USERNAME##</user>
-    <email>##LEAD_EMAIL##</email>
+    <name>Marcel Bretschneider</name>
+    <user>3epnm</user>
+    <email>marcel.bretschneider@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>##CURRENT_DATE##</date>
+  <date>2010-10-31</date>
   <version>
-    <release>##PLUGIN_VERSION##</release>
-    <api>##API_VERSION##</api>
+    <release>0.1.0</release>
+    <api>0.1.0</api>
   </version>
   <stability>
-    <release>##STABILITY##</release>
-    <api>##STABILITY##</api>
+    <release>beta</release>
+    <api>beta</api>
   </stability>
   <license uri="http://www.symfony-project.org/license">MIT license</license>
-  <notes>-</notes>
+  <notes>
+     * 3epnm: First release of the plugin  
+  </notes>
   <contents>
-    ##CONTENTS##
+    <dir name="/">
+      <file md5sum="aef8fa2fa065cc4865fc128eb1036d0f" name="lib/sfJunaioXmlHelper.class.php" role="data" />
+      <file md5sum="d6b0c3e54fcb9671d9d3d231f0d3f7ec" name="lib/sfJunaioChannelUser.class.php" role="data" />
+      <file md5sum="37d5bb121dfe1a71a6d8f5399af95a97" name="modules/sfJunaioChannel/actions/actions.class.php" role="data" />
+      <file md5sum="813a42eeb796c9cdfcbd802a989ac344" name="config/sfJunaioChannelPluginConfiguration.class.php" role="data" />
+      <file md5sum="e8778503f794160a7066dd1cfaaed6d1" name="config/routing.yml" role="data" />
+      <file md5sum="6312a46b308bb4328179d762eb158288" name="README" role="data" />
+    </dir>
   </contents>
   <dependencies>
     <required>

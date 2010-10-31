@@ -54,7 +54,6 @@ class sfJunaioChannelActions extends sfActions
             $xmlHelper->addNode("int",   "minaccuracy");
             $xmlHelper->addNode("int",   "maxdistance");
             $xmlHelper->addNode("int",   "perimeter");
-            $xmlHelper->addNode("float", "o");
             $xmlHelper->addNode("uri",   "thumbnail");
             $xmlHelper->addNode("uri",   "icon");
             $xmlHelper->addNode("text",  "phone");

@@ -35,6 +35,12 @@ http://www.junaio.com/publisher
              enabled_modules:
                - sfJunaioChannel
 
+  * Add a Route to the channel application's `routing.yml` to enable the search interface
+﻿
+        junaio_search:
+          url: /sfJunaioChannel/pois/search/
+          param: { module: sfJunaioChannel, action: search }
+
   * Add your Junaio Channel api_key in the channel application's `app.yml`
 
         all:
@@ -44,6 +50,10 @@ http://www.junaio.com/publisher
             api_key: ... # your_junaio_api_key
             dev_user: ... # your_junaio_user_name
             dev_pass: ... # your_junaio_password
+
+  * Clear you cache
+
+        symfony cc
 
   * Edit the apps/channel/lib/myUser.class.php and extend the myUser class from the sfJunaioChannelUser
     provided with the sfJunaioChannelPlugin
@@ -57,3 +67,13 @@ http://www.junaio.com/publisher
     As the Callback URL choose __http://your_webroot//channel.php/sfJunaioChannel__
     and for Supported Features use __None__
 
+## Test the Channel ##
+
+
+You are ready to test the `sfJunaioChannelPlugin` with the validation procedure of your
+Junaio Channel, or by calling the dev enviroment of the channel:
+
+http://your_webroot/channel_dev.php/sfJunaioChannel/pois/search/?&l=37.77522,-122.420082,0
+
+The search request points to the location in San Francisco. The `sfJunaioBackendPlugin`
+provides a fixture POI Data for this purpose.
