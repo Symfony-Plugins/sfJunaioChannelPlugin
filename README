@@ -1,0 +1,59 @@
+# sfJunaioChannel plugin #
+
+The `sfJunaioChannelPlugin` serves as Junaio Channel and provides
+POI data, which is managed with the `sfJunaioBackendPlugin`.
+
+You need a Junaio Developer Account, which can created here:
+
+http://www.junaio.com/publisher
+
+
+## Installation ##
+
+  * Install the plugin (via a package)
+
+        symfony plugin:install ﻿--stability=beta sfJunaioChannelPlugin
+
+  * Install the plugin (via a Subversion checkout)
+
+        svn co http//svn.symfony-project.com/plugins/sfJunaioChannelPlugin/trunk plugins/sfJunaioChannelPlugin
+
+  * Activate the plugin in the `config/ProjectConfiguration.class.php`
+
+        class ProjectConfiguration extends sfProjectConfiguration {
+            public function setup() { $this->enablePlugins('sfJunaioChannelPlugin'); }
+        }
+
+  * Generate a Channel Application
+
+        ./symfony generate:app channel
+
+  * Enable the plugin in the channel application's `settings.yml`
+
+        all:
+          .settings:
+             enabled_modules:
+               - sfJunaioChannel
+
+  * Add your Junaio Channel api_key in the channel application's `app.yml`
+
+        all:
+          junaio:
+            api_host: api.junaio.com
+            auth_date_tolerance: 900000
+            api_key: ... # your_junaio_api_key
+            dev_user: ... # your_junaio_user_name
+            dev_pass: ... # your_junaio_password
+
+  * Edit the apps/channel/lib/myUser.class.php and extend the myUser class from the sfJunaioChannelUser
+    provided with the sfJunaioChannelPlugin
+
+        <?php
+        
+        class myUser extends sfJunaioChannelUser { }
+
+  * Generate a new Junaio Channel at the Junaio Website
+
+    As the Callback URL choose __http://your_webroot//channel.php/sfJunaioChannel__
+    and for Supported Features use __None__
+
