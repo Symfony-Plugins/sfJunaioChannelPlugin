@@ -51,7 +51,7 @@ class sfJunaioXmlHelper {
             $this->nodeListNow["s"] = $this->poiNow->$nodename;
          break;
          case "l" :
-            $this->nodeListNow[$nodename] = sprintf("%.2f,%.2f,%.2f", $this->poiNow->latitude, $this->poiNow->longitude, $this->poiNow->altitude);
+            $this->nodeListNow[$nodename] = sprintf("%.5f,%.5f,%.5f", $this->poiNow->latitude, $this->poiNow->longitude, $this->poiNow->altitude);
          break;
          case "translation" :
             $this->nodeListNow[$nodename] = sprintf("%.2f,%.2f,%.2f", $this->poiNow->translation_x, $this->poiNow->translation_y, $this->poiNow->translation_z);

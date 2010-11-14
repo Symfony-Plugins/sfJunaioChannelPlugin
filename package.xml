@@ -17,7 +17,7 @@ http://www.junaio.com/publisher</description>
   </lead>
   <date>2010-10-31</date>
   <version>
-    <release>0.1.0</release>
+    <release>0.1.2</release>
     <api>0.1.0</api>
   </version>
   <stability>
@@ -36,6 +36,7 @@ http://www.junaio.com/publisher</description>
       <file md5sum="813a42eeb796c9cdfcbd802a989ac344" name="config/sfJunaioChannelPluginConfiguration.class.php" role="data" />
       <file md5sum="e8778503f794160a7066dd1cfaaed6d1" name="config/routing.yml" role="data" />
       <file md5sum="6312a46b308bb4328179d762eb158288" name="README" role="data" />
+      <file md5sum="80780a1230b520beee86f2b6c22f0341" name="LICENSE" role="data" />
     </dir>
   </contents>
   <dependencies>

@@ -37,9 +37,10 @@ http://www.junaio.com/publisher
 
   * Add a Route to the channel application's `routing.yml` to enable the search interface
 ﻿
-        junaio_search:
-          url: /sfJunaioChannel/pois/search/
-          param: { module: sfJunaioChannel, action: search }
+
+          junaio_search:
+            url: /sfJunaioChannel/pois/search/
+            param: { module: sfJunaioChannel, action: search }
 
   * Add your Junaio Channel api_key in the channel application's `app.yml`
 
@@ -59,7 +60,7 @@ http://www.junaio.com/publisher
     provided with the sfJunaioChannelPlugin
 
         <?php
-        
+
         class myUser extends sfJunaioChannelUser { }
 
   * Generate a new Junaio Channel at the Junaio Website
